@@ -7,7 +7,7 @@ Both teachers and students are identified using their email addresses.
 ## Prerequisites
 - NodeJS v18.x.x
 - Docker
-- MySQL                                                                    |
+- MySQL                
 
 <br>
 
@@ -22,16 +22,14 @@ Both teachers and students are identified using their email addresses.
 
 ## Commands
 
-All the commands listed should be ran in ./typescript directory.
+All the commands listed should be ran in project directory.
 -- -
 
 ### Starting Project Services
 
 This will start all the dependencies services i.e. database cotainer. <br>
 
-After the database container is up, the database schema and seed scripts located in the typescript/database folder will be automatically initiated and applied.
-
-Database credentials defined in .env
+After the database container is up, the database schema and seed scripts located in the /database folder will be automatically initiated and applied.
 
 ```bash
 npm run start:services
@@ -82,6 +80,6 @@ npm test -- __tests__/userService.test.ts
 
 You can use Postman Collection to test the API.
 
-Get Postman Collection from typescript/postman folder
+Get Postman Collection from /postman folder
 
 Import it into [Postman](https://www.postman.com/downloads/) and test the endpoints easily.
