@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1750533795091" clover="3.2.0">
+  <project timestamp="1750533795091" name="All files">
+    <metrics statements="112" coveredstatements="98" conditionals="59" coveredconditionals="44" methods="32" coveredmethods="22" elements="203" coveredelements="164" complexity="0" loc="112" ncloc="112" packages="3" files="9" classes="9"/>
+    <package name="config">
+      <metrics statements="28" coveredstatements="14" conditionals="15" coveredconditionals="11" methods="11" coveredmethods="1"/>
+      <file name="database.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\config\database.ts">
+        <metrics statements="7" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+      </file>
+      <file name="logger.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\config\logger.ts">
+        <metrics statements="21" coveredstatements="8" conditionals="5" coveredconditionals="1" methods="10" coveredmethods="1"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="48" count="10" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="80" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="models">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="StudentInfo.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\models\StudentInfo.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+      </file>
+      <file name="TeacherInfo.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\models\TeacherInfo.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+      </file>
+      <file name="TeacherStudent.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\models\TeacherStudent.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+      </file>
+      <file name="User.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\models\User.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="68" coveredstatements="68" conditionals="44" coveredconditionals="33" methods="21" coveredmethods="21"/>
+      <file name="notificationService.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\services\notificationService.ts">
+        <metrics statements="24" coveredstatements="24" conditionals="22" coveredconditionals="17" methods="8" coveredmethods="8"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="22" count="1" type="cond" truecount="6" falsecount="2"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+      </file>
+      <file name="studentService.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\services\studentService.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="userService.ts" path="C:\Users\Ufinity\Desktop\pg\interview-package-ts-pg-v1\interview-package-ts-pg-v1\typescript\src\services\userService.ts">
+        <metrics statements="34" coveredstatements="34" conditionals="16" coveredconditionals="10" methods="12" coveredmethods="12"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="4" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
