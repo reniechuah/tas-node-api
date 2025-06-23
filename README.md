@@ -77,9 +77,9 @@ npm test -- --coverage
 This will run specific unit test.
 
 ```bash
-npm test -- __tests__/studentService.test.ts
-npm test -- __tests__/notificationService.test.ts
-npm test -- __tests__/userService.test.ts 
+npm test -- __tests__/services/studentService.test.ts
+npm test -- __tests__/services/notificationService.test.ts
+npm test -- __tests__/services/userService.test.ts 
 ```
 -- -
 <br>

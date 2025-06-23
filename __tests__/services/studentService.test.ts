@@ -1,9 +1,9 @@
-import { suspendStudentByEmail } from '../src/services/studentService';
-import User from '../src/models/User';
-import StudentInfo from '../src/models/StudentInfo';
+import { suspendStudentByEmail } from '../../src/services/studentService';
+import User from '../../src/models/User';
+import StudentInfo from '../../src/models/StudentInfo';
 
-jest.mock('../src/models/User');
-jest.mock('../src/models/StudentInfo');
+jest.mock('../../src/models/User');
+jest.mock('../../src/models/StudentInfo');
 
 describe('suspendStudentByEmail', () => {
   afterEach(() => {
@@ -42,7 +42,7 @@ describe('suspendStudentByEmail', () => {
     (StudentInfo.findOne as jest.Mock).mockResolvedValue(null);
 
     await expect(suspendStudentByEmail('student@example.com'))
-      .rejects.toThrow('StudentInfo not found');
+      .rejects.toThrow('Student not found');
   });
 
   it('should do nothing if student is already suspended', async () => {

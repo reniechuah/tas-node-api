@@ -1,13 +1,13 @@
-import { registerStudentsToTeacher, getCommonStudents } from '../src/services/userService';
-import User from '../src/models/User';
-import TeacherInfo from '../src/models/TeacherInfo';
-import StudentInfo from '../src/models/StudentInfo';
-import TeacherStudent from '../src/models/TeacherStudent';
+import { registerStudentsToTeacher, getCommonStudents } from '../../src/services/userService';
+import User from '../../src/models/User';
+import TeacherInfo from '../../src/models/TeacherInfo';
+import StudentInfo from '../../src/models/StudentInfo';
+import TeacherStudent from '../../src/models/TeacherStudent';
 
-jest.mock('../src/models/User');
-jest.mock('../src/models/TeacherInfo');
-jest.mock('../src/models/StudentInfo');
-jest.mock('../src/models/TeacherStudent');
+jest.mock('../../src/models/User');
+jest.mock('../../src/models/TeacherInfo');
+jest.mock('../../src/models/StudentInfo');
+jest.mock('../../src/models/TeacherStudent');
 
 describe('userService', () => {
   afterEach(() => {
