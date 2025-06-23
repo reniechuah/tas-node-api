@@ -1,4 +1,4 @@
--- Insert User
+-- Insert initial users (teachers and students)
 INSERT INTO
     User (name, email)
 VALUES
@@ -10,19 +10,20 @@ VALUES
     ('Agnes', 'studentagnes@gmail.com'),
     ('Miche', 'studentmiche@gmail.com');
 
--- Insert TeacherInfo (userId must match Ken = 1, Alice = 2)
+-- Insert Ken and Alice as active teachers for 2025
 INSERT INTO
     TeacherInfo (userId, status, year)
 VALUES
-    (1, 'ACTIVE', 2025),
-    (2, 'ACTIVE', 2025);
+    (1, 'ACTIVE', 2025),    -- Ken
+    (2, 'ACTIVE', 2025);    -- Alice
 
--- Insert StudentInfo (userId must match Bob = 3, Jon = 4, Hon = 5)
+
+-- Insert all 5 students as active for 2025
 INSERT INTO
     StudentInfo (userId, status, year)
 VALUES
-    (3, 'ACTIVE', 2025),
-    (4, 'ACTIVE', 2025),
-    (5, 'ACTIVE', 2025),
-    (6, 'ACTIVE', 2025),
-    (7, 'ACTIVE', 2025);
+    (3, 'ACTIVE', 2025),    -- Bob
+    (4, 'ACTIVE', 2025),    -- Jon
+    (5, 'ACTIVE', 2025),    -- Hon
+    (6, 'ACTIVE', 2025),    -- Agnes
+    (7, 'ACTIVE', 2025);    -- Miche

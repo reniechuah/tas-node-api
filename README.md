@@ -1,17 +1,41 @@
 # Teacher Administration System
 
-This project provides a RESTful API for teachers to manage students through basic administrative functions. <br>
+## Overview
+This project provides a RESTful API for teachers to manage students through basic administrative functions.  
+
 Both teachers and students are identified using their email addresses.
 
 
-## Prerequisites
+## Database Design
+
+The database schema consists of four main tables:
+
+- **User**: Stores both teachers and students, identified by a unique email.
+- **TeacherInfo**: Additional info for teachers (status, year).
+- **StudentInfo**: Additional info for students (status, year).
+- **TeacherStudent**: A join table representing the relationship between teachers and their registered students.
+
+Relationships:
+- Each `TeacherInfo` and `StudentInfo` is associated with `User`.
+- Each teacher can register multiple students through the `TeacherStudent` relationship table.
+
+Assumption:
+- The `TeacherStudent` relationship is used to represent class membership.
+- A separate Class entity was not introduced, as all required operations (e.g., register, suspend, notify) can be effectively handled through this relationship.
+- This approach was chosen for simplicity and is aligned with the given API requirements.
+
+👉 See [`database/DDL.sql`](database/DDL.sql) for full table definitions.
+
+<br>
+
+## 🛠️ Prerequisites
 - NodeJS v18.x.x
 - Docker
 - MySQL                
 
 <br>
 
-## Exposed Port
+### Exposed Port
 
 | S/N | Application | Exposed Port |
 | --- | ----------- | ------------ |
@@ -20,16 +44,18 @@ Both teachers and students are identified using their email addresses.
 
 <br>
 
-## Commands
+## 🚀 Commands
 
-All the commands listed should be ran in project directory.
+All commands below should be run from the project directory.
+
 -- -
 
 ### Starting Project Services
 
-This will start the docker services cotainer i.e. database cotainer. <br>
+This starts the Docker service (MySQL container).
 
-After the database container is up, the database schema and seed scripts located in the /database folder will be automatically initiated and applied.
+After the database container is up, the schema and seed scripts located in the `database/` folder will be automatically initialized.
+
 
 ```bash
 npm run start:services
@@ -55,26 +81,29 @@ npm run start:dev
 
 <br>
 
-### Check local application is started
-
-You should be able to call (GET) the following endpoint and get a 200 response
-
+### Health Check
+To confirm the API is running locally:
 ```
-http://localhost:3000/api/healthcheck
+GET http://localhost:3000/api/healthcheck
 ```
+Should return HTTP 200 OK
 -- -
 <br>
 
-### Run Project Unit Tests 
+### 🧪 Run Unit Tests
 
-This will run project unit tests.
+Run all unit tests:
 
 ```bash
 npm test
+```
+
+With coverage:
+```bash
 npm test -- --coverage 
 ```
 
-This will run specific unit test.
+Run a specific test:
 
 ```bash
 npm test -- __tests__/services/studentService.test.ts
@@ -84,10 +113,10 @@ npm test -- __tests__/services/userService.test.ts
 -- -
 <br>
 
-### Postman Collection
+### 📬 Postman Collection
 
-You can use Postman Collection to test the API.
+You can test API endpoints using [Postman](https://www.postman.com/downloads/) .
 
-Get Postman Collection from /postman folder
+Import the collection from the `postman/` folder.
 
-Import it into [Postman](https://www.postman.com/downloads/) and test the endpoints easily.
+Run the provided request examples to test the endpoints.
