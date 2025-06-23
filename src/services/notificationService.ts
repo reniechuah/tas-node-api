@@ -2,14 +2,15 @@ import User from '../models/User';
 import TeacherInfo from '../models/TeacherInfo';
 import StudentInfo from '../models/StudentInfo';
 import TeacherStudent from '../models/TeacherStudent';
+import TeacherNotFoundError from '../errors/TeacherNotFoundError';
 
 export async function getNotificationRecipients(teacherEmail: string, notification: string): Promise<string[]> {
   // 1. Get teacher's user and teacherInfo
   const teacherUser = await User.findOne({ where: { email: teacherEmail } });
-  if (!teacherUser) throw new Error('Teacher not found');
+  if (!teacherUser) throw new TeacherNotFoundError();
 
   const teacherInfo = await TeacherInfo.findOne({ where: { userId: teacherUser.id } });
-  if (!teacherInfo) throw new Error('TeacherInfo not found');
+  if (!teacherInfo) throw new TeacherNotFoundError();
 
   // 2. Get students registered with teacher
   const registeredLinks = await TeacherStudent.findAll({

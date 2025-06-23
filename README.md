@@ -27,12 +27,20 @@ All the commands listed should be ran in project directory.
 
 ### Starting Project Services
 
-This will start all the dependencies services i.e. database cotainer. <br>
+This will start the docker services cotainer i.e. database cotainer. <br>
 
 After the database container is up, the database schema and seed scripts located in the /database folder will be automatically initiated and applied.
 
 ```bash
 npm run start:services
+```
+
+<br>
+
+### Installing Project dependencies
+
+```bash
+npm install
 ```
 
 <br>

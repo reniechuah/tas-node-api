@@ -2,16 +2,18 @@ import User from '../models/User';
 import TeacherInfo from '../models/TeacherInfo';
 import StudentInfo from '../models/StudentInfo';
 import TeacherStudent from '../models/TeacherStudent';
+import TeacherNotFoundError from '../errors/TeacherNotFoundError';
+import MultipleTeachersNotFoundError from '../errors/MultipleTeachersNotFoundError';
 
 
 // Register students under a teacher
 export async function registerStudentsToTeacher(teacherEmail: string, studentEmails: string[]): Promise<void> {
   // 1. Find teacher's userId
   const teacherUser = await User.findOne({ where: { email: teacherEmail } });
-  if (!teacherUser) throw new Error('Teacher not found');
+  if (!teacherUser) throw new TeacherNotFoundError();
 
   const teacherInfo = await TeacherInfo.findOne({ where: { userId: teacherUser.id } });
-  if (!teacherInfo) throw new Error('TeacherInfo not found');
+  if (!teacherInfo) throw new TeacherNotFoundError();
 
   // 2. Find all studentInfo records by email
   const studentUsers = await User.findAll({ where: { email: studentEmails } });
@@ -41,7 +43,7 @@ export async function getCommonStudents(teacherEmails: string[]): Promise<string
   // 1. Get User -> TeacherInfo for each teacher email
   const teacherUsers = await User.findAll({ where: { email: teacherEmails } });
 
-  if (teacherUsers.length !== teacherEmails.length) throw new Error('One or more teachers not found');
+  if (teacherUsers.length !== teacherEmails.length) throw new MultipleTeachersNotFoundError();
 
   const teacherInfoIds = await Promise.all(
     teacherUsers.map(async (user) => {
