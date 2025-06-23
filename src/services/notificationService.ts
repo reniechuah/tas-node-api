@@ -5,7 +5,7 @@ import TeacherStudent from '../models/TeacherStudent';
 import TeacherNotFoundError from '../errors/TeacherNotFoundError';
 
 export async function getNotificationRecipients(teacherEmail: string, notification: string): Promise<string[]> {
-  // 1. Get teacher's user and teacherInfo
+  // 1. Get teacher's user and teacher info
   const teacherUser = await User.findOne({ where: { email: teacherEmail } });
   if (!teacherUser) throw new TeacherNotFoundError();
 
@@ -23,9 +23,7 @@ export async function getNotificationRecipients(teacherEmail: string, notificati
     .map(link => link.StudentInfo?.User?.email)
     .filter((email): email is string => !!email);
 
-  // 3. Extract @mentioned emails from notification
-  // const mentionedEmails = [...notification.matchAll(/@([\w.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g)]
-  //   .map(match => match[1]);
+  // 3. Extract @mentioned student emails from notification
   const mentionedEmails = (notification.match(/@([\w.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g) || [])
     .map(email => email.slice(1)); // Remove '@'
   
