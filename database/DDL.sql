@@ -35,5 +35,7 @@ CREATE TABLE IF NOT EXISTS TeacherStudent (
     teacherInfoId INT NOT NULL,                -- FK to TeacherInfo(id)
     studentInfoId INT NOT NULL,                -- FK to StudentInfo(id)
     FOREIGN KEY (teacherInfoId) REFERENCES TeacherInfo(id) ON DELETE CASCADE,
-    FOREIGN KEY (studentInfoId) REFERENCES StudentInfo(id) ON DELETE CASCADE
-);    
+    FOREIGN KEY (studentInfoId) REFERENCES StudentInfo(id) ON DELETE CASCADE,
+
+    UNIQUE INDEX uq_teacher_student (teacherInfoId, studentInfoId)  -- -- Index for lookup teacherInfoId, studentInfoId and prevents duplicate pairings.
+);
