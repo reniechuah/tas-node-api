@@ -11,6 +11,7 @@
     "start:dev": "nodemon",
     "start:services": "docker-compose up -d",
     "build:services": "docker-compose up --build -d",
+    "remove:services":"docker-compose down -v",
     "lint": "eslint \"src/**/*.ts\""
   },
   "license": "ISC",

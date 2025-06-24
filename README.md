@@ -49,6 +49,15 @@ Assumption:
 All commands below should be run from the project directory.
 
 -- -
+### Remove Docker Services and Volumes
+
+To stop and remove all Docker services and delete persisted volumes (e.g., database data):
+
+```bash
+npm run remove:services
+```
+Use this when you’ve made changes to the database schema or want to reset all data
+
 
 ### Starting Project Services
 
