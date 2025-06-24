@@ -66,6 +66,7 @@ npm run remove:services
 ```
 Use this when you’ve made changes to the database schema or want to reset all data
 
+<br>
 
 ### Starting Project Services
 
