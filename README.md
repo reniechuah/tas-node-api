@@ -19,6 +19,14 @@ Relationships:
 - Each `TeacherInfo` and `StudentInfo` is associated with `User`.
 - Each teacher can register multiple students through the `TeacherStudent` relationship table.
 
+Indexes:
+1. Composite index on (userId, status) in `TeacherInfo` and `StudentInfo`
+- Helps optimize filtering queries, especially when retrieving only active teachers or students.
+
+2. Unique composite index on (teacherInfoId, studentInfoId) in `TeacherStudent` 
+- Prevents duplicate teacher–student pairings (i.e. a student being registered multiple times under the same teacher).
+- Improves performance when querying students registered to a specific teacher.
+
 Assumption:
 - The `TeacherStudent` relationship is used to represent class membership.
 - A separate Class entity was not introduced, as all required operations (e.g., register, suspend, notify) can be effectively handled through this relationship.
